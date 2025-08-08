@@ -65,12 +65,39 @@
       font-variant: small-caps;
     }
 
+    html {
+    scroll-behavior: smooth;  /* enables smooth scrolling */
+  }
+
+  .back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #333;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: sans-serif;
+  opacity: 0.8;
+  z-index: 999;
+  transition: all 0.3s ease;
+  }
+
+  .back-to-top:hover {
+  background-color: #555;
+  opacity: 1;
+  transform: scale(1.05);
+  }
+
   </style>
 
      
 </head>
 <body>
   <div class="container">
+    <body id="top">
     <h1>Jacques Lu, Ph.D., FRM, CFA</h1> <br>
     <p>Assistant Professor of Finance, <a href="https://uncw.edu" target="_blank">University of North Carolina Wilmington</a></p>
     Email: luy at uncw dot edu
@@ -163,17 +190,6 @@
     </li>
 
    
-
-    <!--
-    <li style="margin-bottom: 1.5em; padding-left: 20px;">
-      <a href="http://dx.doi.org/10.2139/ssrn.5145529" target="_blank">
-        Beyond the Puzzle: The Hidden Structure of Idiosyncratic Volatility and Mertonian Risk
-      </a> 
-      (with 
-      <a href="https://belkcollege.uncc.edu/directory/yufeng-han" target="_blank">Yufeng Han</a> and 
-      <a href="http://apps.olin.wustl.edu/faculty/zhou/?" target="_blank">Guofu Zhou</a>).
-    </li>
- -->
     <li style="margin-bottom: 1.5em; padding-left: 20px;">
       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3810878" target="_blank">
         The Conditional Forward Return and Autocorrelation from VIX Derivatives
@@ -271,7 +287,8 @@
 
     <hr>
 
-    <p><small>Last updated: August 2025 (<a href="#top">Back to Top</a>)</small></p>
+    <p><small>Last updated: August 2025</small></p>
+    <a href="#top" class="back-to-top">⬆ Back to Top</a>
 
   </div>
 </body>
