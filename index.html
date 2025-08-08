@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Jacques Lu | Finance Research | Asset Pricing & Derivatives</title>
   <meta name="author" content="Jacques Lu">
-  <meta name="description" content="Jacques Lu is a tenure-track assistant professor of finance and CFA and FRM chartholders. His research covers asset pricing, derivatives, risk management, and machine learning in finance."/>
+  <meta name="description" content="Jacques Lu is a tenure-track assistant professor of finance and CFA and FRM charterholder. His research focuses on asset pricing, derivatives, risk management, and machine learning in finance." />
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://jacqueslufinance.github.io/">
@@ -17,6 +17,10 @@
   <meta property="og:url" content="https://jacqueslufinance.github.io/" />
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Georgia, serif;
       background-color: #fefefe;
@@ -65,50 +69,42 @@
       font-variant: small-caps;
     }
 
-    html {
-    scroll-behavior: smooth;  /* enables smooth scrolling */
-  }
+    .back-to-top {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #333;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: sans-serif;
+      opacity: 0.8;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
 
-  .back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #333;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: sans-serif;
-  opacity: 0.8;
-  z-index: 999;
-  transition: all 0.3s ease;
-  }
-
-  .back-to-top:hover {
-  background-color: #555;
-  opacity: 1;
-  transform: scale(1.05);
-  }
-
+    .back-to-top:hover {
+      background-color: #555;
+      opacity: 1;
+      transform: scale(1.05);
+    }
   </style>
-
-     
 </head>
+
 <body>
-  <div class="container">
-    <body id="top">
+  <div class="container" id="top">
     <h1>Jacques Lu, Ph.D., FRM, CFA</h1> <br>
     <p>Assistant Professor of Finance, <a href="https://uncw.edu" target="_blank">University of North Carolina Wilmington</a></p>
     Email: luy at uncw dot edu
 
-
     <p>
-        <a href="https://jacqueslufinance.github.io/LU_CV.pdf" target="_blank">CV</a> | 
-        <a href="https://scholar.google.com/citations?user=d7BnOhkAAAAJ&hl=en" target="_blank">Google Scholar</a> | 
-        <a href="https://orcid.org/0000-0002-0474-1661" target="_blank">ORCID</a>
-        
-      </p>
+      <a href="https://jacqueslufinance.github.io/LU_CV.pdf" target="_blank">CV</a> |
+      <a href="https://scholar.google.com/citations?user=d7BnOhkAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0002-0474-1661" target="_blank">ORCID</a>
+    </p>
 
     <hr>
 
@@ -288,8 +284,19 @@
     <hr>
 
     <p><small>Last updated: August 2025</small></p>
-    <a href="#top" class="back-to-top">⬆ Back to Top</a>
-
+    <a href="#top" class="back-to-top" id="backToTop">⬆ Back to Top</a>
   </div>
+
+  <script>
+    const backToTopButton = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
